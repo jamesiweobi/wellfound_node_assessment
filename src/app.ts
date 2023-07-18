@@ -3,7 +3,7 @@ import express from 'express';
 import { connectDB } from './app_startup';
 import { NotFoundErrorHandler, ServerErrorHandler } from './utils/errorHandlers';
 import { logger } from './utils/logger';
-import { loadMiddleware } from './utils/middleWare.loader';
+import { loadMiddleware } from './app_startup/middleWare.loader';
 
 const app = express();
 const PORT = 3000; 

@@ -1,5 +1,5 @@
 import express, { Application } from "express";
-import { logger } from "./logger";
+import { logger } from "../utils/logger";
 
 export const loadMiddleware = (app: Application) => {
   app.use(express.json());
