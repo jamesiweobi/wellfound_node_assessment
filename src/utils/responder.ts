@@ -1,4 +1,5 @@
-import { ResponseParams } from "../@types";
+import { ResponseParams } from '../@types';
+import { IUserObject } from '../models/user.model';
 
 export const sendResponse = ({
   res,
@@ -12,3 +13,11 @@ export const sendResponse = ({
     data,
   });
 };
+
+export function formatUserResponseData(user: IUserObject) {
+  return {
+    email: user.email,
+    firstName: user.firstName,
+    username: user.username,
+  };
+}

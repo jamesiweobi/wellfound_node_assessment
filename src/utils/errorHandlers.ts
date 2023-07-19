@@ -1,7 +1,13 @@
 import { Response, Request, NextFunction } from "express";
 import { sendResponse } from "./responder";
 import { logger } from "./logger";
+import { ValidationError as InputError } from "joi";
 
+export const handleValidationError = (error: InputError) => {
+  const { details } = error;
+  const errorMessage = details[0].message;
+  throw new ValidationError(errorMessage);
+};
 
 class ErrorObject extends Error {
   constructor(public name: string, public statusCode: number) {

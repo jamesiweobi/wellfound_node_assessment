@@ -13,3 +13,30 @@
 [31merror[39m: Resource not found. {"DATE":"2023-07-18T02:31:01.023Z","STACK_TRACE":{"message":"Resource not found.","name":"NOT_FOUND_ERROR","statusCode":404}}
 [32minfo[39m: 2023-07-18T02:31:03.066Z - GET - /favicon.ico - ::1
 [31merror[39m: Resource not found. {"DATE":"2023-07-18T02:31:03.066Z","STACK_TRACE":{"message":"Resource not found.","name":"NOT_FOUND_ERROR","statusCode":404}}
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: 2023-07-19T23:13:18.782Z - GET - /api/users/register - ::1
+[31merror[39m: Resource not found. {"DATE":"2023-07-19T23:13:18.784Z","STACK_TRACE":{"message":"Resource not found.","name":"NOT_FOUND_ERROR","statusCode":404}}
+[32minfo[39m: 2023-07-19T23:13:46.070Z - GET - /api/users/register - ::1
+[31merror[39m: Resource not found. {"DATE":"2023-07-19T23:13:46.071Z","STACK_TRACE":{"message":"Resource not found.","name":"NOT_FOUND_ERROR","statusCode":404}}
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[31merror[39m: A User with this email already exists {"DATE":"2023-07-19T23:15:37.917Z","STACK_TRACE":{"message":"A User with this email already exists","name":"DUPLICATE_RESOURCE_ERROR","statusCode":409}}
+[32minfo[39m: 2023-07-19T23:16:58.653Z - GET - /api/user/profile - ::1
+[31merror[39m: Resource not found. {"DATE":"2023-07-19T23:16:58.654Z","STACK_TRACE":{"message":"Resource not found.","name":"NOT_FOUND_ERROR","statusCode":404}}
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 
