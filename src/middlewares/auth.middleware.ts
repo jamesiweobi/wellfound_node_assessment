@@ -3,6 +3,7 @@ import { UnauthorizedError } from '../utils/errorHandlers';
 import jwt from 'jsonwebtoken';
 import { IUserObject } from '../models/user.model';
 import { UserService } from '../services/user.service';
+import { appConfig } from '../config/app.config';
 
 const userService = new UserService();
 
@@ -16,7 +17,7 @@ export const authUserMiddleware = async (
     throw new UnauthorizedError('Access denied. You need to be logged in.');
   }
   try {
-    const decoded = jwt.verify(token, 'CONFIG.JWT_SECRET_KEY!') as IUserObject;
+    const decoded = jwt.verify(token, appConfig.jwtSecret) as IUserObject;
     const user = await userService.getUserById(decoded._id);
     req.user = user as IUserObject;
     next();

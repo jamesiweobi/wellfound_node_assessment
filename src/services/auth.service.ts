@@ -4,12 +4,11 @@ import { DuplicateResourceError, UserError } from '../utils/errorHandlers';
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 import { formatUserResponseData } from '../utils/responder';
+import { appConfig } from '../config/app.config';
 
-const  userRepo = new  UserRepo()
+const userRepo = new UserRepo();
 
 export class AuthService {
-
-
   async signup({ email, password, firstName, username }: IUserObject) {
     const accountExists = await userRepo.findOne({
       email: email,
@@ -40,13 +39,13 @@ export class AuthService {
     }
     return {
       user: formatUserResponseData(user),
-      token:this._generateJwt(user),
+      token: this._generateJwt(user),
     };
   }
 
   private _generateJwt(payload: IUser) {
-    return jwt.sign({ ...payload }, 'CONFIG.JWT_SECRET_KEY!', {
-      expiresIn: '1h'!,
+    return jwt.sign({ ...payload }, appConfig.jwtSecret, {
+      expiresIn: appConfig.jwtExpiration,
     });
   }
 }

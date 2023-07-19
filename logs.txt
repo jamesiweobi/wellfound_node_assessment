@@ -40,3 +40,5 @@
 [32minfo[39m: Connected to Database!!! 
 [32minfo[39m: Server running on Port:3000
 [32minfo[39m: Connected to Database!!! 
+[32minfo[39m: Server running on Port:3000
+[32minfo[39m: Connected to Database!!! 

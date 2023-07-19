@@ -1,20 +1,16 @@
 import mongoose from 'mongoose';
-import { config } from "process";
 import { DatabaseError } from "../utils/errorHandlers";
 import { logger } from '../utils/logger';
-
-
-const { database_url } = config as any;
+import { appConfig } from '../config/app.config';
 
 export const connectDB = () => {
   mongoose
-    .connect("mongodb://127.0.0.1:27017/test")
+    .connect(appConfig.mongoUri)
     .then(() => logger.info(`Connected to Database!!! `))
     .catch((e: Error) => {
       throw new DatabaseError(e.message);
     });
 };
-
 
 export const disconnectDB = () => {
   mongoose.connection
